@@ -1,0 +1,26 @@
+
+[data name:"corgsTime" source:"vendor-ww-monthly-202103-202203.csv" /]
+
+
+[Table data:corgsTime /]
+
+
+
+[action onClick:`alert('Mobile Vendor Market Share Worldwide')`]Table Info[/action],
+
+[IdyllVegaLite data:corgsTime spec:`{
+  width: 800,
+  height: 400,
+  mark: "line",
+  encoding: {
+    x: {field: "Date", type: "temporal", axis:{title:"Year", format:"%Y"}},
+    y: {field: "Samsung", type: "quantitative"},
+  }
+}` /]
+
+ 
+I found this dataset fom statcounter, a website traffic analysis website. 
+This dataset indicates teh movile vendor market share worldwide. Total of 47 brands were included in this dataset, and a 'other' category to indicate the rest of the mobile venders.
+This line plot indicates the market share of Samsung from March 2021 to March 2022. 
+
+The dataset is downloaded from https://gs.statcounter.com/vendor-market-share/mobile
